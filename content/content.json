@@ -1,0 +1,556 @@
+{
+  "pt": {
+    "hero": {
+      "langLabel": "Idioma",
+      "socialLabel": "Redes sociais",
+      "navLabel": "Seções",
+      "themeToDark": "Ativar modo escuro",
+      "themeToLight": "Ativar modo claro",
+      "nav": [
+        {
+          "label": "Sobre",
+          "href": "#about"
+        },
+        {
+          "label": "Experiência",
+          "href": "#experience"
+        },
+        {
+          "label": "Projetos",
+          "href": "#projects"
+        },
+        {
+          "label": "Stack",
+          "href": "#stack"
+        },
+        {
+          "label": "Contato",
+          "href": "#contact"
+        }
+      ],
+      "role": "Desenvolvedora Full-Stack",
+      "status": "Always building something new",
+      "ctaContact": "Falar comigo",
+      "ctaProjects": "Ver projetos",
+      "scroll": "Rolar para baixo",
+      "skip": "Pular para o conteúdo"
+    },
+    "about": {
+      "label": "01 — Sobre mim",
+      "h1a": "Desenvolvimento full-stack com olhar",
+      "h1b": "criativo.",
+      "p1": "Mais de um ano de experiência profissional no desenvolvimento de aplicações web e microSaaS, do front-end ao back-end, com integração de APIs REST e bancos de dados relacionais.",
+      "p2": "Minha trajetória passa por Marketing, Design e Customer Success, áreas que me ensinaram a começar pelo usuário. Por isso, antes de escrever código, gosto de planejar: entender o problema, desenhar a solução e só então desenvolver, com organização e boas práticas. É assim que chego a aplicações intuitivas, acessíveis e criativas.",
+      "facts": [
+        {
+          "k": "Formação",
+          "v": "Análise e Desenvolvimento de Sistemas",
+          "s": "Centro Universitário Cesuca (2024–2026)"
+        },
+        {
+          "k": "Inglês",
+          "v": "Avançado · C1",
+          "s": "Yázigi (2019–2025)"
+        }
+      ],
+      "imgLabel": "Foto de Gabriela Flores",
+      "img": "/about-me/imagem.jpg"
+    },
+    "experience": {
+      "label": "02 — Experiência",
+      "h1a": "Experiência",
+      "h1b": "profissional.",
+      "intro": "Histórico em desenvolvimento web.",
+      "now": "Atual",
+      "techLabel": "Tecnologias",
+      "jobs": [
+        {
+          "role": "Desenvolvedora Web",
+          "org": "Freelance",
+          "meta": "Autônoma · Remoto",
+          "period": "set. 2026 — o momento",
+          "current": true,
+          "past": false,
+          "bullets": [
+            "Prototipação e design de interfaces, desenvolvimento de aplicações web e automações.",
+            "Foco em funcionalidade e responsividade, com integração a serviços externos."
+          ],
+          "tech": [
+            "TypeScript",
+            "React.js",
+            "Tailwind CSS",
+            "Figma"
+          ]
+        },
+        {
+          "role": "Assistente de programação",
+          "org": "KoreCloud",
+          "meta": "Tempo integral · Presencial",
+          "period": "mar. 2026 — set. 2026",
+          "current": false,
+          "past": true,
+          "bullets": [
+            "Desenvolvimento de aplicações web, microSaaS e sistemas internos com PHP e Laravel.",
+            "Funcionalidades front-end e back-end, integrações com APIs REST e processamento de dados.",
+            "Manutenção preventiva e corretiva, melhorias personalizadas e suporte técnico no onboarding de clientes.",
+            "Marketing e design: participação no rebranding da identidade visual e criação de materiais visuais."
+          ],
+          "tech": [
+            "Laravel",
+            "PHP",
+            "JavaScript",
+            "React.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "MariaDB",
+            "APIs REST"
+          ],
+          "highlight": {
+            "name": "KoreIntegra",
+            "desc": "microSaaS de automação financeira para empresas de BPO, que integra planilhas ao Conta Azul. Desenvolvimento do back-end, do front-end e da integração via API. 27.227 vendas enviadas no pré-lançamento (jul.–set. de 2026)."
+          }
+        },
+        {
+          "role": "Estagiária de TI",
+          "org": "KoreCloud",
+          "meta": "Estágio · Presencial",
+          "period": "set. 2025 — fev. 2026",
+          "current": false,
+          "past": true,
+          "bullets": [
+            "Desenvolvimento e manutenção de aplicações web.",
+            "Customer Success: relatórios gerenciais de atendimento com apoio de IA e pesquisas de satisfação para identificar melhorias.",
+            "Marketing e design: planejamento, criação e publicação de conteúdo para mídias sociais."
+          ],
+          "tech": [
+            "PHP",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "Tailwind CSS",
+            "MariaDB"
+          ],
+          "highlight": {
+            "name": "Koreview",
+            "desc": "Dashboard de análise de dados do suporte técnico, com métricas operacionais, indicadores de satisfação e visualizações de desempenho para clientes e gestores."
+          }
+        }
+      ],
+      "projectLabel": "Projeto em destaque"
+    },
+    "projects": {
+      "label": "03 — Projetos",
+      "h1a": "Meus",
+      "h1b": "projetos.",
+      "intro": "Projetos pessoais e acadêmicos e as tecnologias usadas em cada um.",
+      "thumbLabel": "Espaço reservado para a imagem do projeto",
+      "techLabel": "Tecnologias",
+      "demo": "Prévia",
+      "code": "Github",
+      "prev": "Projetos anteriores",
+      "next": "Próximos projetos",
+      "projects": [
+        {
+          "num": "01",
+          "title": "ADA: Aplicativo de Segurança Pessoal para Mulheres em Situação de Risco",
+          "desc": "Aplicativo mobile para mulheres em situação de vulnerabilidade, com uma forma rápida e simples de pedir ajuda em situações de risco.",
+          "tech": [
+            "Flutter",
+            "Dart"
+          ],
+          "image": "/projects/simbolo-ada.png",
+          "imageFit": "contain",
+          "codeUrl": "https://github.com/gabbiefl/ada_app"
+        },
+        {
+          "num": "02",
+          "title": "SkillTree: Aplicação de Estruturas de Dados para Modelagem de Trilhas de Aprendizagem em TI",
+          "desc": "Modela trilhas de aprendizagem relacionando objetivos profissionais, habilidades e seus pré-requisitos.",
+          "tech": [
+            "TypeScript",
+            "React.js"
+          ],
+          "codeUrl": "https://github.com/gabbiefl/skill-tree",
+          "image": "/projects/simbolo-skilltree.png",
+          "imageShape": "circle"
+        },
+        {
+          "num": "03",
+          "title": "Análise da relação entre a duração do sono, a qualidade do descanso e os níveis de estresse com base em ciência de dados",
+          "desc": "Análise em Python com dados de 374 pessoas: o estresse influencia a qualidade do descanso mais do que a duração do sono.",
+          "tech": [
+            "Python",
+            "Pandas"
+          ],
+          "image": "/projects/simbolo-sleephealth-pandas.png",
+          "imageShape": "circle",
+          "codeUrl": "https://github.com/gabbiefl/sleep-health-data-analysis"
+        }
+      ]
+    },
+    "stack": {
+      "label": "04 — Stack",
+      "h1a": "Competências",
+      "h1b": "técnicas.",
+      "intro": "Tecnologias estudadas na graduação e aplicadas na prática.",
+      "g1": {
+        "title": "Front-end",
+        "items": [
+          "HTML",
+          "CSS",
+          "Sass",
+          "Bootstrap",
+          "Tailwind CSS",
+          "JavaScript",
+          "TypeScript",
+          "React.js"
+        ]
+      },
+      "g2": {
+        "title": "Back-end & Banco de Dados",
+        "items": [
+          "Node.js",
+          "Express",
+          "MySQL",
+          "PostgreSQL",
+          "Prisma"
+        ]
+      },
+      "g3": {
+        "title": "Mobile",
+        "items": [
+          "Dart",
+          "Flutter"
+        ]
+      },
+      "g4": {
+        "title": "Análise de Dados",
+        "items": [
+          "Python"
+        ]
+      },
+      "g5": {
+        "title": "Ferramentas e Design",
+        "items": [
+          "Git",
+          "GitHub",
+          "Figma"
+        ]
+      }
+    },
+    "contact": {
+      "label": "05 — Contato",
+      "h1a": "Vamos",
+      "h1b": "conversar?",
+      "send": "Enviar e-mail",
+      "status": "Aberta a novas oportunidades",
+      "listLabel": "Contatos e redes",
+      "top": "Voltar ao topo",
+      "mailto": "mailto:gabrielafl.dev@gmail.com",
+      "links": [
+        {
+          "isMail": true,
+          "isGithub": false,
+          "isLinkedin": false,
+          "label": "E-mail",
+          "value": "gabrielafl.dev@gmail.com",
+          "href": "mailto:gabrielafl.dev@gmail.com"
+        },
+        {
+          "isMail": false,
+          "isGithub": true,
+          "isLinkedin": false,
+          "label": "GitHub",
+          "value": "github.com/gabbiefl",
+          "href": "https://github.com/gabbiefl"
+        },
+        {
+          "isMail": false,
+          "isGithub": false,
+          "isLinkedin": true,
+          "label": "LinkedIn",
+          "value": "in/gabriela-flores-lopes",
+          "href": "https://www.linkedin.com/in/gabriela-flores-lopes/"
+        }
+      ]
+    }
+  },
+  "en": {
+    "hero": {
+      "langLabel": "Language",
+      "socialLabel": "Social links",
+      "navLabel": "Sections",
+      "themeToDark": "Switch to dark mode",
+      "themeToLight": "Switch to light mode",
+      "nav": [
+        {
+          "label": "About",
+          "href": "#about"
+        },
+        {
+          "label": "Experience",
+          "href": "#experience"
+        },
+        {
+          "label": "Projects",
+          "href": "#projects"
+        },
+        {
+          "label": "Stack",
+          "href": "#stack"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "role": "Full-Stack Developer",
+      "status": "Always building something new",
+      "ctaContact": "Get in touch",
+      "ctaProjects": "View projects",
+      "scroll": "Scroll down",
+      "skip": "Skip to content"
+    },
+    "about": {
+      "label": "01 — About me",
+      "h1a": "Full-stack development with a",
+      "h1b": "creative eye.",
+      "p1": "Over a year of professional experience building web applications and microSaaS, from front-end to back-end, with REST API integration and relational databases.",
+      "p2": "My path runs through Marketing, Design and Customer Success, fields that taught me to start with the user. That is why, before writing code, I like to plan: understand the problem, design the solution and only then build it, with organization and good practices. That is how I arrive at applications that are intuitive, accessible and creative.",
+      "facts": [
+        {
+          "k": "Education",
+          "v": "Systems Analysis and Development",
+          "s": "Centro Universitário Cesuca (2024–2026)"
+        },
+        {
+          "k": "English",
+          "v": "Advanced · C1",
+          "s": "Yázigi (2019–2025)"
+        }
+      ],
+      "imgLabel": "Photo of Gabriela Flores",
+      "img": "/about-me/imagem.jpg"
+    },
+    "experience": {
+      "label": "02 — Experience",
+      "h1a": "Professional",
+      "h1b": "experience.",
+      "intro": "Work history in web development.",
+      "now": "Current",
+      "techLabel": "Technologies",
+      "jobs": [
+        {
+          "role": "Web Developer",
+          "org": "Freelance",
+          "meta": "Self-employed · Remote",
+          "period": "Sep 2026 — present",
+          "current": true,
+          "past": false,
+          "bullets": [
+            "Interface prototyping and design, web application development and automations.",
+            "Focus on functionality and responsiveness, with integration of external services."
+          ],
+          "tech": [
+            "TypeScript",
+            "React.js",
+            "Tailwind CSS",
+            "Figma"
+          ]
+        },
+        {
+          "role": "Junior Software Developer",
+          "org": "KoreCloud",
+          "meta": "Full-time · On-site",
+          "period": "Mar 2026 — Sep 2026",
+          "current": false,
+          "past": true,
+          "bullets": [
+            "Development of web applications, microSaaS and internal systems with PHP and Laravel.",
+            "Front-end and back-end features, REST API integrations and data processing.",
+            "Preventive and corrective maintenance, custom improvements and technical support during client onboarding.",
+            "Marketing and design: participation in the visual identity rebranding and creation of visual materials."
+          ],
+          "tech": [
+            "Laravel",
+            "PHP",
+            "JavaScript",
+            "React.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "MariaDB",
+            "REST APIs"
+          ],
+          "highlight": {
+            "name": "KoreIntegra",
+            "desc": "Financial automation microSaaS for BPO companies, integrating spreadsheet data with Conta Azul. Development of the back-end, front-end and API integration. 27,227 sales submitted during the pre-release (Jul–Sep 2026)."
+          }
+        },
+        {
+          "role": "IT Intern (Web Development & Customer Success)",
+          "org": "KoreCloud",
+          "meta": "Internship · On-site",
+          "period": "Sep 2025 — Feb 2026",
+          "current": false,
+          "past": true,
+          "bullets": [
+            "Development and maintenance of web applications.",
+            "Customer Success: management reports on support, built with AI assistance, and satisfaction surveys to identify improvements.",
+            "Marketing and design: planning, creation and publication of social media content."
+          ],
+          "tech": [
+            "PHP",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "Tailwind CSS",
+            "MariaDB"
+          ],
+          "highlight": {
+            "name": "Koreview",
+            "desc": "Data analysis dashboard for technical support, with operational metrics, satisfaction indicators and performance visualizations for clients and managers."
+          }
+        }
+      ],
+      "projectLabel": "Featured project"
+    },
+    "projects": {
+      "label": "03 — Projects",
+      "h1a": "My",
+      "h1b": "projects.",
+      "intro": "Personal and academic projects and the technologies used in each.",
+      "thumbLabel": "Placeholder for the project image",
+      "techLabel": "Technologies",
+      "demo": "Preview",
+      "code": "Github",
+      "prev": "Previous projects",
+      "next": "Next projects",
+      "projects": [
+        {
+          "num": "01",
+          "title": "ADA: A Personal Safety App for Women at Risk",
+          "desc": "Mobile app for women in vulnerable situations, with a quick and simple way to ask for help in risky situations.",
+          "tech": [
+            "Flutter",
+            "Dart"
+          ],
+          "image": "/projects/simbolo-ada.png",
+          "imageFit": "contain",
+          "codeUrl": "https://github.com/gabbiefl/ada_app"
+        },
+        {
+          "num": "02",
+          "title": "SkillTree: Applying Data Structures to Model Learning Paths in IT",
+          "desc": "Models learning paths by relating professional goals, skills and their prerequisites.",
+          "tech": [
+            "TypeScript",
+            "React.js"
+          ],
+          "codeUrl": "https://github.com/gabbiefl/skill-tree",
+          "image": "/projects/simbolo-skilltree.png",
+          "imageShape": "circle"
+        },
+        {
+          "num": "03",
+          "title": "Analysis of the Relationship Between Sleep Duration, Rest Quality, and Stress Levels Using Data Science",
+          "desc": "Python analysis of data from 374 people: stress affects rest quality more than sleep duration does.",
+          "tech": [
+            "Python",
+            "Pandas"
+          ],
+          "image": "/projects/simbolo-sleephealth-pandas.png",
+          "imageShape": "circle",
+          "codeUrl": "https://github.com/gabbiefl/sleep-health-data-analysis"
+        }
+      ]
+    },
+    "stack": {
+      "label": "04 — Stack",
+      "h1a": "Technical",
+      "h1b": "skills.",
+      "intro": "Technologies studied during my degree and applied in practice.",
+      "g1": {
+        "title": "Front-end",
+        "items": [
+          "HTML",
+          "CSS",
+          "Sass",
+          "Bootstrap",
+          "Tailwind CSS",
+          "JavaScript",
+          "TypeScript",
+          "React.js"
+        ]
+      },
+      "g2": {
+        "title": "Back-end & Databases",
+        "items": [
+          "Node.js",
+          "Express",
+          "MySQL",
+          "PostgreSQL",
+          "Prisma"
+        ]
+      },
+      "g3": {
+        "title": "Mobile",
+        "items": [
+          "Dart",
+          "Flutter"
+        ]
+      },
+      "g4": {
+        "title": "Data Analysis",
+        "items": [
+          "Python"
+        ]
+      },
+      "g5": {
+        "title": "Tools and Design",
+        "items": [
+          "Git",
+          "GitHub",
+          "Figma"
+        ]
+      }
+    },
+    "contact": {
+      "label": "05 — Contact",
+      "h1a": "Let’s",
+      "h1b": "talk?",
+      "send": "Send e-mail",
+      "status": "Open to new opportunities",
+      "listLabel": "Contacts and social links",
+      "top": "Back to top",
+      "mailto": "mailto:gabrielafl.dev@gmail.com",
+      "links": [
+        {
+          "isMail": true,
+          "isGithub": false,
+          "isLinkedin": false,
+          "label": "E-mail",
+          "value": "gabrielafl.dev@gmail.com",
+          "href": "mailto:gabrielafl.dev@gmail.com"
+        },
+        {
+          "isMail": false,
+          "isGithub": true,
+          "isLinkedin": false,
+          "label": "GitHub",
+          "value": "github.com/gabbiefl",
+          "href": "https://github.com/gabbiefl"
+        },
+        {
+          "isMail": false,
+          "isGithub": false,
+          "isLinkedin": true,
+          "label": "LinkedIn",
+          "value": "in/gabriela-flores-lopes",
+          "href": "https://www.linkedin.com/in/gabriela-flores-lopes/"
+        }
+      ]
+    }
+  }
+}

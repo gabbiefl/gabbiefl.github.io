@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriela Flores | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfólio de Gabriela Flores, desenvolvedora full-stack: projetos, experiência e tecnologias. Full-stack developer portfolio."
+    />
+    <meta name="author" content="Gabriela Flores" />
+    <!-- Cor da barra do navegador no celular, por tema (a mesma do papel de cada tema). -->
+    <meta name="theme-color" content="#f3eee6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#151013" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gabriela Flores | Portfolio" />
+    <meta
+      property="og:description"
+      content="Portfólio de Gabriela Flores, desenvolvedora full-stack: projetos, experiência e tecnologias."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Aplica tema e idioma salvos antes da primeira pintura (evita piscar).
+      // Mesma lógica de ThemeProvider/LangProvider; chaves em src/storage.ts.
+      (function () {
+        var root = document.documentElement;
+        var theme = 'light';
+        var lang = /^pt/i.test(navigator.language) ? 'pt' : 'en';
+        try {
+          var t = localStorage.getItem('gf-theme');
+          if (t === 'dark') theme = 'dark';
+          if (t === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+          var l = localStorage.getItem('gf-lang');
+          if (l === 'pt' || l === 'en') lang = l;
+        } catch (e) {}
+        root.setAttribute('data-theme', theme);
+        root.setAttribute('lang', lang);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

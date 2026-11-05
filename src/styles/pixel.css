@@ -1,0 +1,185 @@
+/* Técnica "pixel-chunk": duas camadas (.o contorno, .i miolo) com
+   cantos em degrau via clip-path e sombra dura via drop-shadow. */
+
+/* Define o tamanho do degrau do elemento: pixel-step-4 => --step: 4px. */
+@utility pixel-step-* {
+  --step: calc(--value(integer) * 1px);
+}
+
+/* Recorta os quatro cantos em degrau de --step (polígono de 12 pontos). */
+@utility pixel-clip {
+  clip-path: polygon(
+    0 var(--step),
+    var(--step) var(--step),
+    var(--step) 0,
+    calc(100% - var(--step)) 0,
+    calc(100% - var(--step)) var(--step),
+    100% var(--step),
+    100% calc(100% - var(--step)),
+    calc(100% - var(--step)) calc(100% - var(--step)),
+    calc(100% - var(--step)) 100%,
+    var(--step) 100%,
+    var(--step) calc(100% - var(--step)),
+    0 calc(100% - var(--step))
+  );
+}
+
+/* Sombra dura (sem blur) de N px; a cor vem de --sc e cai em --ink. */
+@utility pixel-shadow-* {
+  --d: calc(--value(integer) * 1px);
+  filter: drop-shadow(var(--d) var(--d) 0 var(--sc, var(--ink)));
+}
+
+/* Borda serrilhada da fita adesiva do polaroid. */
+@utility tape-edge {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    96% 25%,
+    100% 50%,
+    96% 75%,
+    100% 100%,
+    0 100%,
+    4% 75%,
+    0 50%,
+    4% 25%
+  );
+}
+
+@layer components {
+  /* Botão: a.pxb | button.pxb > span.pxb-o > span.pxb-i */
+  .pxb {
+    --d0: 4px;
+    --d: var(--d0);
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    filter: drop-shadow(var(--d) var(--d) 0 var(--sc, var(--ink)));
+    transition:
+      transform 0.08s steps(2),
+      filter 0.08s steps(2);
+  }
+
+  .pxb:hover {
+    --d: calc(var(--d0) + 1px);
+    transform: translate(-1px, -1px);
+  }
+
+  .pxb:active {
+    --d: 1px;
+    transform: translate(calc(var(--d0) - 1px), calc(var(--d0) - 1px));
+  }
+
+  .pxb:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 5px;
+  }
+
+  /* Desabilitado (ex.: seta do carrossel no começo/fim): apagado, sem clique e sem o efeito de
+     hover/pressionar (que moveria o botão). */
+  .pxb:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    --d: var(--d0);
+  }
+
+  .pxb-o {
+    --step: 4px;
+    display: block;
+    padding: 2px;
+    background: var(--ink);
+    @apply pixel-clip;
+  }
+
+  .pxb-i {
+    --step: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 0 28px;
+    box-sizing: border-box;
+    background: var(--bg, var(--paper));
+    color: var(--fg, var(--ink));
+    font-size: 16px;
+    font-weight: 600;
+    @apply pixel-clip;
+  }
+
+  /* Celular: o botão padrão (md) fica mais compacto (menos padding e texto de 15px) para dois
+     botões, como "Ver projetos" e "Falar comigo", caberem lado a lado. Os modificadores
+     abaixo (.pxb-sm, .pxb-sq...) têm especificidade maior e continuam mandando nos seus tamanhos. */
+  @media (max-width: 480px) {
+    .pxb-i {
+      padding: 0 16px;
+      font-size: 15px;
+      gap: 8px;
+    }
+  }
+
+  /* Celulares estreitos (≈360px): mais um pouco de compactação, porque em português
+     "Ver projetos" e "Falar comigo" juntos são largos e, sem isso, os dois botões quebrariam em duas linhas. */
+  @media (max-width: 380px) {
+    .pxb-i {
+      padding: 0 12px;
+      font-size: 14px;
+    }
+  }
+
+  /* .s: degraus 3px/1px e sombra 3px */
+  .pxb-s {
+    --d0: 3px;
+  }
+  .pxb-s .pxb-o {
+    --step: 3px;
+  }
+  .pxb-s .pxb-i {
+    --step: 1px;
+  }
+
+  /* .sq: ícone 40x40 */
+  .pxb-sq .pxb-i {
+    width: 40px;
+    min-height: 40px;
+    padding: 0;
+  }
+
+  /* .sq-s: ícone 32x32 (versão menor do .sq, para o header) */
+  .pxb-sq-s .pxb-i {
+    width: 32px;
+    min-height: 32px;
+    padding: 0;
+  }
+
+  /* .sm: altura 40, texto 14px */
+  .pxb-sm .pxb-i {
+    min-height: 40px;
+    padding: 0 14px;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+  }
+
+  /* .pri: preenchido, com sombra rosa para aparecer nos dois temas */
+  .pxb-primary {
+    --bg: var(--ink);
+    --fg: var(--on-ink);
+    --sc: var(--pink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pxb {
+      transition: none;
+    }
+    .pxb:hover,
+    .pxb:active {
+      transform: none;
+    }
+  }
+}

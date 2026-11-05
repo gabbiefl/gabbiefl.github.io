@@ -1,0 +1,8 @@
+node_modules
+dist
+playwright-report
+test-results
+package-lock.json
+# dados e documentação escritos à mão: não reformatar
+content
+README.md

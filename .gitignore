@@ -1,0 +1,34 @@
+# Dependências e build
+node_modules
+dist
+*.tsbuildinfo
+.eslintcache
+
+# Segredos e variáveis de ambiente (use .env.example para documentar as chaves)
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+
+# Logs
+*.log
+npm-debug.log*
+
+# Testes (Playwright) e cobertura
+playwright-report
+test-results
+blob-report
+playwright/.cache
+coverage
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
