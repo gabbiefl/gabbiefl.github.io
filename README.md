@@ -17,10 +17,6 @@ _My portfolio: projects, experience and technologies, in a single page._
 
 ## Sobre o projeto
 
-Site de uma página que reúne quem eu sou, minha experiência, meus projetos e as tecnologias com que trabalho, pensado para ser lido por recrutadores no Brasil e no exterior.
-
-A identidade visual mistura papel quadriculado e pixel art, com cantos em degrau, sombras duras e movimento discreto. O pixel é só ornamento: o que se lê é limpo, com tipografia clara e bom contraste.
-
 - **Bilíngue:** português e inglês, com a escolha guardada no navegador.
 - **Tema claro e escuro:** troca instantânea, sem piscar no carregamento.
 - **Sem biblioteca de UI:** os componentes e o sistema visual foram escritos do zero com Tailwind CSS.
