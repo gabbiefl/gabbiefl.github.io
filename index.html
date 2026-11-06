@@ -29,7 +29,11 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://gabbiefl.github.io/og-image.png" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- SVG para navegadores modernos; .ico como reserva (Safari e crawlers não usam SVG);
+         apple-touch-icon para "adicionar à tela inicial" no iOS. -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <script>
       // Aplica tema e idioma salvos antes da primeira pintura (evita piscar).
       // Mesma lógica de ThemeProvider/LangProvider; chaves em src/storage.ts.
