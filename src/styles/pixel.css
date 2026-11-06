@@ -60,9 +60,9 @@
     cursor: pointer;
     text-decoration: none;
     filter: drop-shadow(var(--d) var(--d) 0 var(--sc, var(--ink)));
-    transition:
-      transform 0.08s steps(2),
-      filter 0.08s steps(2);
+    /* Sem transition de propósito: o deslocamento é de 1px, e com steps(2) o quadro do meio
+       cairia em meio pixel (translate -0.5px, sombra 4.5px) e a borda de 2px piscava com
+       anti-aliasing. Trocar direto de um estado para o outro mantém tudo em pixels inteiros. */
   }
 
   .pxb:hover {
@@ -174,9 +174,6 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .pxb {
-      transition: none;
-    }
     .pxb:hover,
     .pxb:active {
       transform: none;
