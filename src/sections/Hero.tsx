@@ -97,7 +97,7 @@ export function Hero() {
 
           <div
             aria-hidden="true"
-            className="absolute top-[calc(66%+18px)] left-[calc(79%+46px)] z-3 origin-top-left max-[800px]:scale-[.68]"
+            className="absolute top-[calc(66%+18px)] left-[calc(79%+46px)] z-3 origin-top-left max-[800px]:scale-[.68] max-[480px]:scale-[.52]"
           >
             <div className="flex flex-col items-start motion-safe:animate-float">
               <Cursor />
