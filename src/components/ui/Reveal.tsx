@@ -59,10 +59,12 @@ export function Reveal({ as = 'div', delay = 0, className, children }: RevealPro
       data-shown={shown}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
       className={cn(
-        // steps(8): 16px / 8 = saltos de 2px inteiros. Com ease-out o translate passava por valores
-        // fracionários (9.66px, 5.97px...) e a borda pixel de 2px era redesenhada com anti-aliasing a
-        // cada quadro, "piscando" até assentar no fim. Em degraus inteiros ela fica sempre nítida.
-        'motion-safe:transition-[opacity,translate] motion-safe:duration-700 motion-safe:ease-[steps(8)]',
+        // Um timing por propriedade (opacity, translate, nessa ordem): a opacidade desliza suave
+        // (ease-out) e só o translate anda em steps(8): 16px / 8 = saltos de 2px inteiros. Com
+        // ease-out o translate passava por valores fracionários (9.66px, 5.97px...) e a borda pixel
+        // de 2px era redesenhada com anti-aliasing a cada quadro, "piscando". Em 400ms cada degrau
+        // dura 50ms; com steps(8) também na opacidade e 700ms (87ms por degrau) parecia travar.
+        'motion-safe:transition-[opacity,translate] motion-safe:duration-400 motion-safe:[transition-timing-function:ease-out,steps(8)]',
         'motion-safe:data-[shown=false]:translate-y-4 motion-safe:data-[shown=false]:opacity-0',
         className,
       )}
