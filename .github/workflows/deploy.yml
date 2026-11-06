@@ -1,0 +1,53 @@
+# Publica o site no GitHub Pages a cada push na main.
+# Fluxo: instala dependências -> lint + typecheck + build -> envia dist/ -> publica.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  # Permite rodar à mão pela aba Actions.
+  workflow_dispatch:
+
+# Princípio do menor privilégio: o token só pode ler o código e publicar no Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Um deploy por vez; um push novo cancela o que ainda está na fila/rodando.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # `npm ci` instala exatamente o que está no package-lock.json (reprodutível).
+      - run: npm ci
+
+      # lint + typecheck + build: se algo falhar, nada é publicado.
+      - run: npm run check
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
