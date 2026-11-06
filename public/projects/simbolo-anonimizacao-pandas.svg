@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Panda with a pixelated face">
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="#141B2D"/>
+
+  <!-- Data points -->
+  <rect x="104" y="118" width="12" height="12" rx="2" fill="#F2D66B"/>
+  <rect x="176" y="72" width="9" height="9" rx="2" fill="#F2D66B"/>
+  <rect x="392" y="104" width="12" height="12" rx="2" fill="#B9A7F0"/>
+  <rect x="440" y="188" width="9" height="9" rx="2" fill="#F2D66B"/>
+  <rect x="78" y="226" width="8" height="8" rx="2" fill="#B9A7F0" opacity="0.8"/>
+
+  <!-- Ears -->
+  <circle cx="160" cy="192" r="44" fill="#2C3658"/>
+  <circle cx="352" cy="192" r="44" fill="#2C3658"/>
+
+  <!-- Face -->
+  <ellipse cx="256" cy="292" rx="132" ry="112" fill="#F4F1EA"/>
+
+  <!-- Pixelated center of the face (eyes and nose) -->
+  <rect x="172" y="244" width="26" height="26" rx="3" fill="#E6E1D4"/>
+  <rect x="200" y="244" width="26" height="26" rx="3" fill="#CFC8B6"/>
+  <rect x="228" y="244" width="26" height="26" rx="3" fill="#B9A7F0"/>
+  <rect x="256" y="244" width="26" height="26" rx="3" fill="#E6E1D4"/>
+  <rect x="284" y="244" width="26" height="26" rx="3" fill="#F2D66B"/>
+  <rect x="312" y="244" width="26" height="26" rx="3" fill="#E6E1D4"/>
+  <rect x="172" y="272" width="26" height="26" rx="3" fill="#2C3658"/>
+  <rect x="200" y="272" width="26" height="26" rx="3" fill="#141B2D"/>
+  <rect x="228" y="272" width="26" height="26" rx="3" fill="#E6E1D4"/>
+  <rect x="256" y="272" width="26" height="26" rx="3" fill="#CFC8B6"/>
+  <rect x="284" y="272" width="26" height="26" rx="3" fill="#141B2D"/>
+  <rect x="312" y="272" width="26" height="26" rx="3" fill="#2C3658"/>
+  <rect x="172" y="300" width="26" height="26" rx="3" fill="#141B2D"/>
+  <rect x="200" y="300" width="26" height="26" rx="3" fill="#2C3658"/>
+  <rect x="228" y="300" width="26" height="26" rx="3" fill="#CFC8B6"/>
+  <rect x="256" y="300" width="26" height="26" rx="3" fill="#E6E1D4"/>
+  <rect x="284" y="300" width="26" height="26" rx="3" fill="#2C3658"/>
+  <rect x="312" y="300" width="26" height="26" rx="3" fill="#141B2D"/>
+  <rect x="172" y="328" width="26" height="26" rx="3" fill="#E6E1D4"/>
+  <rect x="200" y="328" width="26" height="26" rx="3" fill="#CFC8B6"/>
+  <rect x="228" y="328" width="26" height="26" rx="3" fill="#141B2D"/>
+  <rect x="256" y="328" width="26" height="26" rx="3" fill="#2C3658"/>
+  <rect x="284" y="328" width="26" height="26" rx="3" fill="#E6E1D4"/>
+  <rect x="312" y="328" width="26" height="26" rx="3" fill="#B9A7F0"/>
+</svg>

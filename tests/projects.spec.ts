@@ -14,10 +14,10 @@ test.describe('seção projetos (carrossel)', () => {
       .first()
       .evaluate((el) => (el as unknown as { scrollLeft: number }).scrollLeft);
 
-  test('mostra os 3 cartões, cada um com título e imagem ou placeholder', async ({ page }) => {
+  test('mostra os 4 cartões, cada um com título e imagem ou placeholder', async ({ page }) => {
     await page.goto('/');
 
-    await expect(cards(page)).toHaveCount(3);
+    await expect(cards(page)).toHaveCount(4);
     for (const card of await cards(page).all()) {
       await expect(card.getByRole('heading', { level: 3 })).toBeVisible();
       await expect(card.getByRole('img').first()).toBeAttached();
@@ -38,15 +38,19 @@ test.describe('seção projetos (carrossel)', () => {
     await expect(first.getByRole('link')).toHaveCount(1);
   });
 
-  test('desktop: 3 cartões cabem na faixa e as setas não aparecem', async ({ page }) => {
+  test('desktop: 3 cartões cabem na faixa e o 4º fica à direita, alcançável pelas setas', async ({
+    page,
+  }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto('/');
     const track = (await page.locator('#projects ul').first().boundingBox())!;
-    const last = (await cards(page).last().boundingBox())!;
+    const third = (await cards(page).nth(2).boundingBox())!;
 
-    // O último cartão termina dentro da faixa (não fica cortado na borda direita).
-    expect(last.x + last.width).toBeLessThanOrEqual(track.x + track.width + 1);
-    await expect(next(page)).toHaveCount(0);
+    // O terceiro cartão termina dentro da faixa; o quarto passa dela, então a faixa rola e as
+    // setas aparecem (a de voltar começa apagada).
+    expect(third.x + third.width).toBeLessThanOrEqual(track.x + track.width + 1);
+    await expect(next(page)).toBeEnabled();
+    await expect(prev(page)).toBeDisabled();
   });
 
   test('tela estreita: as setas rolam o carrossel e se apagam no começo e no fim', async ({

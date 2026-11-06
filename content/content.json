@@ -186,6 +186,19 @@
           "image": "/projects/simbolo-sleephealth-pandas.png",
           "imageShape": "circle",
           "codeUrl": "https://github.com/gabbiefl/sleep-health-data-analysis"
+        },
+        {
+          "num": "04",
+          "title": "Anonimização de Dados: AI Usage and Impact on Students & Professionals",
+          "desc": "Pseudonimização, generalização e medição do risco de reidentificação (k-anonimato) com Python e Pandas, aplicadas ao dataset AI Usage and Impact on Students and Professionals.",
+          "tech": [
+            "Python",
+            "Pandas",
+            "NumPy"
+          ],
+          "image": "/projects/simbolo-anonimizacao-pandas.svg",
+          "imageShape": "circle",
+          "codeUrl": "https://github.com/gabbiefl/ai-usage-data-anonymization"
         }
       ]
     },
@@ -463,6 +476,19 @@
           "image": "/projects/simbolo-sleephealth-pandas.png",
           "imageShape": "circle",
           "codeUrl": "https://github.com/gabbiefl/sleep-health-data-analysis"
+        },
+        {
+          "num": "04",
+          "title": "Data Anonymization: AI Usage and Impact on Students & Professionals",
+          "desc": "Pseudonymization, generalization and re-identification risk measurement (k-anonymity) with Python and Pandas, applied to the AI Usage and Impact on Students and Professionals dataset.",
+          "tech": [
+            "Python",
+            "Pandas",
+            "NumPy"
+          ],
+          "image": "/projects/simbolo-anonimizacao-pandas.svg",
+          "imageShape": "circle",
+          "codeUrl": "https://github.com/gabbiefl/ai-usage-data-anonymization"
         }
       ]
     },
